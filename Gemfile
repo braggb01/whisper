@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.10'
+gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 
@@ -12,7 +13,6 @@ group :development, :test do
 	gem 'guard-rspec'
   gem 'guard-spork', '1.2.0'
   gem 'spork', '0.9.2'
-  gem 'faker', '1.0.1'
 end
 
 
