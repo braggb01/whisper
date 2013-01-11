@@ -5,10 +5,18 @@
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %>    
+    <%= render 'layouts/shim' %>
+    <!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->  
   </head>
   <body>
     <%= render 'layouts/header' %>
+    <%= yield :jumbotron %>
     <div class="container">
       <% flash.each do |key, value| %>
         <%= content_tag(:div, value, class: "alert alert-#{key}") %>

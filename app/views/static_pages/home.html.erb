@@ -17,7 +17,7 @@
     </div>
   </div> 
 <% else %>
-  <div class="center hero-unit">
+<!--   <div class="center hero-unit">
     <h1>Welcome to the Sample App</h1>
 
     <h2>
@@ -30,5 +30,28 @@
                                 class: "btn btn-large btn-primary" %>
   </div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %> -->
+  <% content_for :jumbotron do %>
+    <div class="jumbotron masthead">
+      <div class="container">
+        <h1>Whisper</h1>
+        <p>Share content, ask questions and make new contacts with professionals in your field from all over the world.</p>
+        <p>
+          <%= link_to "Sign up now!", signup_path, :class => "btn btn-success btn-large" %>
+        </p>
+        <ul class="masthead-links">
+          <li> Public Beta Version*</li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div class="social">
+      <div class="container">
+        <ul class="social-buttons">
+          <li><i class="icon-twitter-sign"></i> Twitter</li>
+          <li><i class="icon-linkedin-sign"></i> LinkedIn</li>
+          <li><i class="icon-facebook-sign"></i> Facebook</li>
+        </ul>
+      </div>
+    </div> -->
+  <% end %>
 <% end %>
